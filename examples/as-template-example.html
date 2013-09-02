@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.song-entry {
+			font-family: sans-serif;
+			color: black;
+			width: 300px;
+			padding: 5px;
+			background-color: #FAFAFA;
+			border: 1px solid #CCC;
+			margin: 10px;
+		}
+		h3, h4 {
+			margin:0.5em;
+		}
+		h3 {
+			color: #666;
+			border-bottom:1px solid black;
+		}
+	</style>
+	<script id="template" type="text/html">
+		<div class="song-entry">
+			<h3>${song}</h3>
+			<h4><em>by</em> ${artist}</h4>
+			<h4><em>from</em> ${album}</h4>
+			<h4>Genres:</h4>
+			<ul class="genre">
+				<li>${value}</li>
+			</ul>
+		</div>
+	</script>
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../src/jquery.as-template.js"></script>
+	<script>
+	var data = [
+		{
+			song:"Rock Song",
+			artist:"Singer Songwriter",
+			album:"Rock Album",
+			genre:[
+				"Classic Rock",
+				"Instrumental Rock"
+			]
+		},
+		{
+			song:"Rap Song",
+			artist:"Rappy McRapper",
+			genre:[
+				"Rap",
+				"Hip-Hop",
+				"Soul"
+			]
+		}
+	];
+
+	var options = {
+		notFoundValue: "(Unknown)"
+	}
+
+	$("body").append( $("#template").asTemplateWith(data, options) );
+	</script>
+</body>
+</html>
