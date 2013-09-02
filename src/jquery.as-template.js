@@ -44,7 +44,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	}
 
 	function fromItem(tempDom, item, isRoot){
-        tempDom = $("<div>").append(tempDom); // single element tree
+		tempDom = $("<div>").append(tempDom); // single element tree
 		if (item instanceof Object === false) item = {value:item}; // key name if none provided
 		for (var key in item){ // finding child templates in data
 			if (item[key] instanceof Array){ // likely child template replacement
