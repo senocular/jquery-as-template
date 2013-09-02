@@ -24,6 +24,8 @@ string = jqueryCollection.asTemplateWith(data [, options]);
 Examples
 --------
 
+Live example: http://senocular.github.io/jquery-as-template/examples/as-template-example.html
+
 Basic example:
 
 ```xml
@@ -207,7 +209,7 @@ Result:
 <h3>Rock Song</h3>
 <h4>by Singer Songwriter</h4>
 <h4>Genres:</h4>
-<ul class="genre">
+<ul>
 	<li>Top 40</li>
 	<li class="genre">Classic Rock</li>
 	<li class="genre">Instrumental Rock</li>
