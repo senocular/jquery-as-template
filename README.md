@@ -6,7 +6,7 @@ A Simple HTML templating method for jQuery with support for repeated elements.
 API
 ---
 
-A single method, `asTemplateWith()` is added to jQuery objects which treats the HTML contents of the query as a template and returns a string with replacements based on a JSON input.
+A single method, `asTemplateWith()` is added to jQuery objects which treats the HTML contents of the query as a template and returns a string with replacements based on a JSON input. It does *not* alter the source HTML.
 
 ```javascript
 // Syntax
